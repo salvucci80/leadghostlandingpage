@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - LeadGhost</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 700px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+        
+        .logo span {
+            color: #00d4ff;
+        }
+        
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #00d4ff;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: scaleIn 0.5s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .checkmark svg {
+            width: 60px;
+            height: 60px;
+            stroke: #1a1a2e;
+            stroke-width: 3;
+            fill: none;
+            animation: drawCheck 0.5s ease-out 0.3s forwards;
+            stroke-dasharray: 100;
+            stroke-dashoffset: 100;
+        }
+        
+        @keyframes drawCheck {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #00d4ff;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            backdrop-filter: blur(10px);
+        }
+        
+        .info-box h2 {
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .info-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .timeline {
+            text-align: left;
+            margin-top: 30px;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .timeline-number {
+            width: 35px;
+            height: 35px;
+            background: #00d4ff;
+            color: #1a1a2e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .timeline-content h3 {
+            margin-bottom: 5px;
+            color: #00d4ff;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #00d4ff;
+            color: #1a1a2e;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+            margin-top: 20px;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
+        }
+        
+        .social-links {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .social-links p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+        
+        .social-links a {
+            color: #00d4ff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            transition: opacity 0.3s;
+        }
+        
+        .social-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .info-box {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Lead<span>Ghost</span></div>
+        
+        <div class="checkmark">
+            <svg viewBox="0 0 52 52">
+                <path d="M14 27l7.5 7.5L38 18"/>
+            </svg>
+        </div>
+        
+        <h1>Request Received! 🎉</h1>
+        <p class="subtitle">We're excited to build your custom AI agent</p>
+        
+        <div class="info-box">
+            <h2>What Happens Next?</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-number">1</div>
+                    <div class="timeline-content">
+                        <h3>Check Your Email (Within 24 Hours)</h3>
+                        <p>We'll send you a detailed questionnaire to understand your exact needs and workflow.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">2</div>
+                    <div class="timeline-content">
+                        <h3>Discovery Call (Optional)</h3>
+                        <p>We can schedule a quick 15-minute call to discuss your project in detail if needed.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">3</div>
+                    <div class="timeline-content">
+                        <h3>Custom Proposal</h3>
+                        <p>You'll receive a tailored proposal outlining exactly what we'll build, timeline, and next steps.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-number">4</div>
+                    <div class="timeline-content">
+                        <h3>We Start Building</h3>
+                        <p>Once approved, we begin creating your custom AI agent exactly to your specifications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <h2>In The Meantime...</h2>
+            <p>Start thinking about:</p>
+            <p>✓ Example outputs you'd like the agent to create<br>
+            ✓ Your brand voice and style preferences<br>
+            ✓ Any specific tools you want it to integrate with<br>
+            ✓ Edge cases or special requirements</p>
+            <p style="margin-top: 20px;">The more details you can provide, the better we can customize your agent!</p>
+        </div>
+        
+        <a href="https://calendly.com/leadghostai" class="cta-button" target="_blank">Schedule Discovery Call (Optional)</a>
+        
+        <div class="social-links">
+            <p>Follow us for AI automation tips and updates:</p>
+            <a href="https://tiktok.com/@leadghostai" target="_blank">TikTok</a>
+            <a href="https://instagram.com/leadghostai" target="_blank">Instagram</a>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.7;">
+            Questions? Email us at <a href="mailto:leadghostai@gmail.com" style="color: #00d4ff;">leadghostai@gmail.com</a>
+        </p>
+    </div>
+</body>
+</html>
